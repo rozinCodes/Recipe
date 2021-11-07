@@ -9,7 +9,7 @@ export default function Home() {
 	// search function
 	const searchFilter = (text) => {
 		if (text) {
-			const filteredList = recipes.filter((item) => {
+			const filteredList = RECIPES.filter((item) => {
 				const itemData = item.name.toUpperCase();
 				const userInput = text.toUpperCase();
 				return itemData.indexOf(userInput) > -1;
@@ -31,7 +31,6 @@ export default function Home() {
 					resizeMode: 'contain',
 					marginBottom: 20,
 					borderRadius: 5,
-					alignSelf: 'center'
 				}}
 			/>
 			<Text style={{ fontWeight: 'bold', marginBottom: 10 }}>{item.name}</Text>
